@@ -39,7 +39,7 @@ gulp.task('devSass',function(){
 
 // 线上环境 起服务
 gulp.task('buildserver',['buildcss'],function(){
-    gulp.src('build')
+    return gulp.src('build')
     .pipe(server({
         port:9090, // 配置端口号
         open:true, // 自动打开浏览器
@@ -60,7 +60,7 @@ gulp.task('buildcss',function(){
     return gulp.src('src/css/*.css')
     .pipe(concat('all.css')) // 合并css文件
     .pipe(mincss()) // 压缩css
-    .pipe(gulp.dest('build/src')) // 输出到目标文件
+    .pipe(gulp.dest('build/css')) // 输出到目标文件
 })
 
 // 操作js
