@@ -1,0 +1,20 @@
+{
+  "name": "zk1",
+  "version": "1.0.0",
+  "description": "skill",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"gulp devserver"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangyun-git/zk1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhangyun-git/zk1/issues"
+  },
+  "homepage": "https://github.com/zhangyun-git/zk1#readme"
+}
