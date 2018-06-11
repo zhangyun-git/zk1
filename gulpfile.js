@@ -50,7 +50,7 @@ gulp.task('buildserver',['buildcss'],function(){
                 return;
             }
             pathname = pathname === '/' ? 'index.html' : pathname;
-            res.end(fs.readFileSync(path.join(__dirname,'src',pathname)))
+            res.end(fs.readFileSync(path.join(__dirname,'build',pathname)))
         }   
     }))
 })
@@ -88,5 +88,5 @@ gulp.task('htmlmin',function(){
 
 // 线上环境的执行顺序
 gulp.task('build',function(cb){
-    sequence('clean',['buildcss','builduglify'],'htmlmin',cb)
+    sequence('clean',['buildcss','builduglify'],'htmlmin','buildserver',cb)
 })
